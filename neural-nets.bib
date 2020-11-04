@@ -246,28 +246,6 @@
   note = {Crean un compresor basado en dos CNNs y un compresor de imágenes (que puede ser JPEG, JPEG2000 o BPG). Las imágenes son tratadas previamente con una CNN que genera una imagen específica para el compresor de imágenes, que es comprimida con el compresor de imagenes y luego, usan la otra CNN para restaurar la imagen original. Todo el sistema es optimizado para cada compresor de imágenes específico.}
 }
 
-@InProceedings{cheng2018deep,
-  author = {Cheng, Z. and
-            Sun, H. and
-	    Takeuchi, M. and
-	    Katto, J.},
-  title = {Deep Convolutional AutoEncoder-based LossyImage Compression},
-  booktitle = {Picture Coding Symposium},
-  year = {2018},
-  pages = {253--257},
-}
-
-@InProceedings{santurkar2018generative,
-  author = {Santurkar, S. and
-            Budden, D. and
-	    Shavit, N.},
-  title = {Generative Compression},
-  booktitle = {Picture Coding Symposium (PCS)},
-  year = {2018},
-  pages = {258--262},
-  organization = {IEEE}
-}
-
 @InProceedings{toderici2017full,
   author = {Toderici, G. and
             Vincent, D. and
@@ -280,6 +258,29 @@
   booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year = {2017},
   pages = {5306--5314}
+}
+
+@InProceedings{cheng2018deep,
+  author = {Cheng, Z. and
+            Sun, H. and
+	    Takeuchi, M. and
+	    Katto, J.},
+  title = {Deep Convolutional AutoEncoder-based LossyImage Compression},
+  booktitle = {Picture Coding Symposium},
+  year = {2018},
+  pages = {253--257},
+  note = {Un CAE (Convolutional AutoEncoder) sigue la filosofía de un MLP (MultiLayer Perceptron) de canal estrecho, pero usa CNNs en lugar de simples capas de neuronas. En este trabajo, se plantea un CAE para comprimir imágenes en blanco y negro (entrenado sólo con la luma de las imágenes en color). El code stream es el resultado de usar J2K a los autovectores (PCA) de los mapas de características generados por la primera mitad del CAE. Se usan patches de 128x128 pixels. Los resultados son buenos, aunque los propios autores comentan que usando GANs podrían mejorarse.}
+}
+
+@InProceedings{santurkar2018generative,
+  author = {Santurkar, S. and
+            Budden, D. and
+	    Shavit, N.},
+  title = {Generative Compression},
+  booktitle = {Picture Coding Symposium (PCS)},
+  year = {2018},
+  pages = {258--262},
+  organization = {IEEE}
 }
 
 @InProceedings{choi2019variable,
@@ -306,6 +307,18 @@
   note = {Usan semantic analysis para decidir el CR de cada pixel de
                   la imagen y a continuación comprimen las imágenes
                   con la red neuronal recurrente de Toderici.}
+}
+
+@InProceedings{adate2019analysing,
+  author = {},
+  title = {Adate, A. and
+           Saxena, R. and
+	   Kiruba, B.G.G.},
+  booktitle = {Soft Computing for Problem Solving},
+  year = {2019},
+  pages = {425--432}
+  publisher = {Springer}
+  note = {Este es un paper raro. No me entero. Además, los resultados no tienen sentido (el PSNR aumenta con el CR).}
 }
 
 @Article{dua2020comprehensive,
