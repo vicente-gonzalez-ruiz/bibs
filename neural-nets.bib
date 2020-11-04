@@ -1,3 +1,34 @@
+@Article{rumelhart86learning,
+  author = {Rumelhart, D.E. and
+            Hinton, G.E. and
+	    Williams, R.J.},
+  title	= {{Learning Representations by Back-Propagating Erros}},
+  journal = {Nature},
+  year = {1986},
+  volume = {323},
+  pages	= {533-536}
+}
+
+@Article{lippman87introduction,
+  author = {Lippman, R.},
+  title	= {{An Introduction to Computing with Neural Nets}},
+  journal = {IEEE ASSP Magazine},
+  year = {1987},
+  volume = {3},
+  number = {4},
+  pages	= {4-22}
+}
+
+@Article{burton98net,
+  author = {Burton, K. and
+            Farkas, D.L.},
+  title	= {{Net Progress}},
+  journal = {Nature},
+  year = {1998},
+  volume = {391},
+  pages	= {540-541}
+}
+
 @Article{jiang1999image,
   author = {Jiang, J.},
   title = {Image compression with neural networks -- A survey},
@@ -5,7 +36,8 @@
   year = {1999},
   volume = {14},
   number = {9},
-  publisher = {Elsevier}
+  publisher = {Elsevier},
+  note = {image (pixels) -> | transform | -> transformed image (coeffs) -> | Quantization | -> quantized transformed image (bins) -> | Entropy Coding | -> compressed image code-stream (code-words). A. Direct NN for image compression. A.1. Back-propagation learning based. A.2. Hebbian learning based. A.3. VQ based. B. NN using existing technology. B.1 Wavelet optimization kernel. B.2. Fractal NN. 3. NN-based predictive coding (DPCM). Narrow channel neural network codec. Several hidden later can exploit the correlation at different resolutions.}
 }
 
 @InProceedings{erdogmus2001entropy,
@@ -42,6 +74,33 @@
   booktitle = {International Conference on Learning Representations},
   year = {2015},
   pages = {1150--1210}
+}
+
+@InProceedings{babu2015hyperspectral,
+  author = {Babu, K.S. and
+            Ramachandran, V. and
+	    Thyagharajan, K.K. and
+	    Santhosh, G.},
+  title = {Hyperspectral Image Compression Algorithms – A Review},
+  booktitle = {Artificial Intelligence and Evolutionary Algorithms in Engineering Systems},
+  year = {2015},
+  pages = {127--138},
+  publisher = {Springer},
+  note = {A HSI can be regarded as a stack of individual images of the same spatial scene. Each pixel records the intensity at different wavelengths of the electromagnetic spectrum reflected by a specific area. Unnecessary information for the analysis process can be removed by the lossy codec.}
+}
+
+@InProceedings{masalmah2015framework,
+  author = {Masalmah, Y.M. and
+            Mart{\'\i}nez Nieves, C. and
+	    Rivera Soto, R. and
+	    Velez, C. and
+	    Gonzalez, J.},
+  title = {A Framework of Hyperspectral Image Compression using Neural Networks},
+  booktitle = {Latin American and Caribbean Conference for Engineering and Technology Proceedings},
+  year = {2015},
+  number = 	 {13},
+  organization = {Univ. del Turabo (Puerto Rico)},
+  note = {Algunas notas: each pixel (vector) has an associated spectral signature. We have thousands of spectral bands (GB/image). Artificial Neural Networks ignore noise and learn information. The results of the compressed analysis should be similar to those of the normal analysis process. No se explota la redundancia entre bandas de frecuencia. Uan un MLP con 3 capas y la capa oculta con menos neuronas que las en entrada y salida.}
 }
 
 @InProceedings{he2016deep,
@@ -191,37 +250,6 @@
   pages = {5306--5314}
 }
 
-@Article{lippman87introduction,
-  author = {Lippman, R.},
-  title	= {{An Introduction to Computing with Neural Nets}},
-  journal = {IEEE ASSP Magazine},
-  year = {1987},
-  volume = {3},
-  number = {4},
-  pages	= {4-22}
-}
-
-@Article{rumelhart86learning,
-  author = {Rumelhart, D.E. and
-            Hinton, G.E. and
-	    Williams, R.J.},
-  title	= {{Learning Representations by Back-Propagating Erros}},
-  journal = {Nature},
-  year = {1986},
-  volume = {323},
-  pages	= {533-536}
-}
-
-@Article{burton98net,
-  author = {Burton, K. and
-            Farkas, D.L.},
-  title	= {{Net Progress}},
-  journal = {Nature},
-  year = {1998},
-  volume = {391},
-  pages	= {540-541}
-}
-
 @InProceedings{choi2019variable,
   author = {Choi, Y. and
             El-Khamy, M.
@@ -231,5 +259,33 @@
   year = {2019},
   editor = {IEEE},
   pages = {3146--3154},
+}
+
+@Article{wang2019end,
+  author = {Wang, C. and
+            Han, Y. and
+	    Wang, W.},
+  title = {An End-to-End Deep Learning Image Compression Framework Based on Semantic Analysis},
+  journal = {Applied Sciences},
+  year = {2019},
+  volume = {9},
+  number = {17},
+  pages = {3580+13},
+  note = {Usan semantic analysis para decidir el CR de cada pixel de
+                  la imagen y a continuación comprimen las imágenes
+                  con la red neuronal recurrente de Toderici.}
+}
+
+@Article{dua2020comprehensive,
+  author = {Dua, Y. and
+            Kumar, V. and
+	    Singh, R.S.},
+  title = {Comprehensive review of hyperspectral imagecompression algorithms},
+  journal = {Optical Engineering},
+  year = {2020},
+  volume = {59},
+  number = {9},
+  pages = {090902-1--090902-39},
+  note = {Sensors collect data in contiguous band of wavelength raging from 400 to 2500 nm. Each band (spectral resolution) has the same number of pixels (spatial resolution). Each pixel collects reflectance value of a spatial area for different wavelengths. Military, agricultural, industry (terrestial and spacial). For example, the AVIRIS sensor captures HSI of 614*500 pixels, with 224 components (unos 131 MB/image). HSIs have statistical and analytical redudancy (we have an excess of information in the images). There are standards: CCSDS (Consultative Committee for Space Data Systems), Posiblidades: lossless/near-lossless/lossy. On-boards compression VS data-center compression.}
 }
 
