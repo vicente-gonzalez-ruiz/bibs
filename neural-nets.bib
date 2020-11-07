@@ -67,6 +67,21 @@
   pages = {249--256},
 }
 
+@InProceedings{goodfellow2014generative,
+  author = {Goodfellow, I. and
+            Pouget-Abadie, J. and
+	    Mirza, M. and
+	    Xu, B. and
+	    Warde-Farley, D. and
+	    Ozair, S. and
+	    Courville, A. and
+	    Bengio, Y.},
+  title = {Generative Adversarial Nets},
+  booktitle = {Advances in neural information processing systems},
+  year = {2014},
+  pages = {2672--2680}
+}
+
 @InProceedings{simonyan2014very,
   author = {Simonyan, K. and
             Zisserman, A.},
@@ -133,12 +148,14 @@
   pages = {3549--3557}
 }
 
-@TechReport{rippel2017real,
+@InProceedings{rippel2017real,
   author = {Rippel, O. and
             Bourdev, L.},
   title = {Real-time adaptive image compression},
-  institution = {arXiv preprint arXiv:1705.05823},
-  year = {2017}
+  booktitle = {International Conference on Machine Learning},
+  year = {2017},
+  pages = {2922--2930},
+  note = {No aclaran mucho el algoritmo que usan (pertenencen a OneWave Inc.) pero más o menos usan un CAE (generator) entrenado usando la filosofía de las GANs (con un discriminator). Los resultados son espectaculares. Entiendo que no realizan transformación adaptativa en el dominio de color.}
 }
 
 @InProceedings{ledig2017photo,
@@ -178,21 +195,6 @@
   title = {Wasserstein GAN},
   institution = {arXiv preprint arXiv:1701.07875},
   year = {2017}
-}
-
-@InProceedings{goodfellow2014generative,
-  author = {Goodfellow, I. and
-            Pouget-Abadie, J. and
-	    Mirza, M. and
-	    Xu, B. and
-	    Warde-Farley, D. and
-	    Ozair, S. and
-	    Courville, A. and
-	    Bengio, Y.},
-  title = {Generative Adversarial Nets},
-  booktitle = {Advances in neural information processing systems},
-  year = {2014},
-  pages = {2672--2680}
 }
 
 @InProceedings{theis2017lossy,
@@ -316,9 +318,36 @@
 	   Kiruba, B.G.G.},
   booktitle = {Soft Computing for Problem Solving},
   year = {2019},
-  pages = {425--432}
-  publisher = {Springer}
+  pages = {425--432},
+  publisher = {Springer},
   note = {Este es un paper raro. No me entero. Además, los resultados no tienen sentido (el PSNR aumenta con el CR).}
+}
+
+@Article{valsesia2019high,
+  author = {Valsesia, D. and
+            Magli, E.},
+  title = {High-throughput Onboard Hyperspectral Image Compression with Ground-based CNN Reconstruction},
+  journal = {Transactions on Geoscience and Remote Sensing},
+  year = {2019},
+  volume = {57},
+  number = {12},
+  pages = {9544--9553},
+  publisher = {IEEE},
+  note = {Proponen modificar el estándar CCSDS (Consultative Committee for Space Data Systems (CCSDS) 123.0-B-1 sacando el cuantificador del lazo DPCM y poniéndolo tras la fase de predicción. Esto aumenta el throughput por 4 aproximadamente para el mismo consumo (estamos pensando en que esto se instala en un satélite) pero empeora la curva RD. Para mitigar este efecto, proponen usar una CNN en tierra que incrementa la calidad, obteniendo una comparable a la que se obtendría dejando el cuantificador dentro del lazo.}
+}
+
+@InProceedings{aidini2019hyperspectral,
+  author = {Aidini, A. and
+            Giannopoulos, M. and
+	    Pentari, A. and
+	    Fotiadou, K. and
+	    Tsakalides, P.},
+  title = {Hyperspectral Image Compression and Super-Resolution Using Tensor Decomposition Learning},
+  booktitle = {53rd Asilomar Conference on Signals, Systems, and Computers},
+  year = {2019},
+  pages = {1369--1373},
+  organization = {IEEE}
+  note = {En realidad este no es un paper de compresión de imágenes hiperespectrales usando ANNs, sino un paper de restauración de imágenes hiperespetrales (usando ANNs) que no poseen la resolución espacial ni el rango dinámico necesarios para su posterior análisis. De hecho, ni siquiera usan un compresor. Simplemente cuantifican las muestras y submuestrean las imágenes para luego ver si las pueden "recuperar" desde el punto de vista de la clasificación.}
 }
 
 @Article{dua2020comprehensive,
